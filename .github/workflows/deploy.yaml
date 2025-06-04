@@ -1,0 +1,13 @@
+# Especificar el nombre del flujo de trabajo
+name: Deploy to server
+
+# Definir los eventos que activarán el flujo de trabajo
+on: push
+
+jobs: 
+  firts_job:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Hola Mundo
+      run: echo "Hola Mundo"
