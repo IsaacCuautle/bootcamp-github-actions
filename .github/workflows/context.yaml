@@ -1,0 +1,16 @@
+name: Deploy to server
+
+on: push
+
+jobs: 
+
+  job:
+
+    # Condiciona el flujo de trabajo segun la rama 
+    if: ${{github.ref == 'refs/heads/main'}} 
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hola Mundo
+        run: echo "Desde context.yaml"
