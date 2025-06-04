@@ -1,4 +1,4 @@
-name: Deploy to server
+name: context
 
 on: push
 
@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hola Mundo
+      - name: "Desde context.yaml"
         run: echo "Desde context.yaml"

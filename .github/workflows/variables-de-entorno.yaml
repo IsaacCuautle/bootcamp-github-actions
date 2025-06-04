@@ -1,0 +1,16 @@
+name: variables de entorno
+
+on: push
+
+jobs: 
+  # Variables de entorno
+  env:
+    MESSAGE: desde env.yaml
+
+  job:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: imprimir mensaje
+        run: echo "${MESSAGE}"
