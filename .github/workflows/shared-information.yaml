@@ -1,0 +1,15 @@
+name: shared-information
+on: push
+
+jobs: 
+  
+  first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Crear variable
+        id: step_1
+        run: echo "message=desde-firts-job" >> $GITHUB_OUTPUT
+
+      - name: Obtener mensaje
+        run: echo "${{ steps.step_1.outputs.message }}"
