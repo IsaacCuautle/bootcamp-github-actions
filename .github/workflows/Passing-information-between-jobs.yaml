@@ -1,4 +1,4 @@
-name: shared-information
+name: passing-information-between-jobs
 on: push
 
 # COMPARTIR INFORMACION ENTRE JOBS
@@ -7,9 +7,9 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
 
-    # Almacenar en outputs
+    # Almacenar en global
     outputs:
-      salida: ${{ steps.step_1.outputs.step1}}
+      salida: ${{ steps.step_1.outputs.message }}
 
     steps:
       - name: Crear variable
@@ -17,15 +17,16 @@ jobs:
         run: echo "message=desde-firts-job" >> $GITHUB_OUTPUT
 
       - name: Obtener mensaje
+        run: echo "${{ steps.step_1.outputs.message }}"
         
     second_job:
       needs: firts_job
       runs-on: ubuntu-latest
 
-      # Crear variables de entorno
+      # Crear variables de entorno y asignar el valor de la referencia
       env:
-        SALIDA: ${{ needs.firts_job.outputs.step1 }}
+        SALIDA: ${{ needs.firts_job.outputs.salida }}
 
       steps:
-        - name: Hola Mundo
+        - name: Imprimir mensaje
           run: echo "$SALIDA"
