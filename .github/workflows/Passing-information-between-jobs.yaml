@@ -1,32 +1,32 @@
-name: passing-information-between-jobs
-on: push
+# name: passing-information-between-jobs
+# on: push
 
-# COMPARTIR INFORMACION ENTRE JOBS
-jobs: 
+# # COMPARTIR INFORMACION ENTRE JOBS
+# jobs: 
   
-  first_job:
-    runs-on: ubuntu-latest
+#   first_job:
+#     runs-on: ubuntu-latest
 
-    # Almacenar en global
-    outputs:
-      salida: ${{ steps.step_1.outputs.message }}
+#     # Almacenar en global
+#     outputs:
+#       salida: ${{ steps.step_1.outputs.message }}
 
-    steps:
-      - name: Crear variable
-        id: step_1
-        run: echo "message=desde-firts-job" >> $GITHUB_OUTPUT
+#     steps:
+#       - name: Crear variable
+#         id: step_1
+#         run: echo "message=desde-firts-job" >> $GITHUB_OUTPUT
 
-      - name: Obtener mensaje
-        run: echo "${{ steps.step_1.outputs.message }}"
+#       - name: Obtener mensaje
+#         run: echo "${{ steps.step_1.outputs.message }}"
         
-  second_job:
-    needs: first_job
-    runs-on: ubuntu-latest
+#   second_job:
+#     needs: first_job
+#     runs-on: ubuntu-latest
 
-    # Crear variables de entorno y asignar el valor de la referencia
-    env:
-      SALIDA: ${{ needs.first_job.outputs.salida }}
+#     # Crear variables de entorno y asignar el valor de la referencia
+#     env:
+#       SALIDA: ${{ needs.first_job.outputs.salida }}
 
-    steps:
-      - name: Imprimir mensaje
-        run: echo "$SALIDA"
+#     steps:
+#       - name: Imprimir mensaje
+#         run: echo "$SALIDA"
