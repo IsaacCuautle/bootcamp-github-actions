@@ -1,15 +1,17 @@
-name: shared-information
-on: push
+# name: shared-information
+# on: push
 
-jobs: 
+# jobs: 
   
-  first_job:
-    runs-on: ubuntu-latest
+#   first_job:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Crear variable
-        id: step_1
-        run: echo "message=desde-firts-job" >> $GITHUB_OUTPUT
+#     steps:
+#       - name: Crear variable
+#         id: step_1
+#         run: echo "message=desde-firts-job" >> $GITHUB_OUTPUT
 
-      - name: Obtener mensaje
-        run: echo "${{ steps.step_1.outputs.message }}"
+#       - name: Obtener mensaje
+        
+#         # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/passing-information-between-jobs
+#         run: echo "${{ steps.step_1.outputs.message }}"
