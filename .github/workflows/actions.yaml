@@ -1,22 +1,22 @@
 name: actions
-
 on: push
 
-jobs: 
-  
+jobs:
   first_job:
     runs-on: ubuntu-latest
 
     # Las actions se declaran a nivel step
     steps:
       - name: Working dir
-        run: ls -al
-      
+        run: ls -a
+
       - name: Action example
-        
+
         # se declara el repositorio, la accion y su version
-        # https://github.com/actions/checkout 
+        # https://github.com/actions/checkout
         uses: actions/checkout@v4
 
+        # si la accion puede recibir parametros usamos with
+        # https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idstepswithargs
       - name: Working dir afeter action
-        run: ls -al
+        run: ls -a
