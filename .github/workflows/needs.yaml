@@ -1,22 +1,22 @@
-name: needs
-on: push
+# name: needs
+# on: push
 
-jobs: 
+# jobs: 
   
-  first_job:
-    runs-on: ubuntu-latest
+#   first_job:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Hola Mundo
-        run: echo "Hola Mundo"
+#     steps:
+#       - name: Hola Mundo
+#         run: echo "Hola Mundo"
 
-  second_job:
+#   second_job:
     
-    # Ejecuta second_job despues de firts_job (ejecucion secuencial)
-    needs: first_job 
+#     # Ejecuta second_job despues de firts_job (ejecucion secuencial)
+#     needs: first_job 
     
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Hola Mundo 2
-        run: echo "Hola Mundo 2"
+#     steps:
+#       - name: Hola Mundo 2
+#         run: echo "Hola Mundo 2"

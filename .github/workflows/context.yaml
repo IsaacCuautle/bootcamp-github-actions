@@ -1,16 +1,16 @@
-name: context
+# name: context
 
-on: push
+# on: push
 
-jobs: 
+# jobs: 
 
-  job:
+#   job:
 
-    # Condiciona el flujo de trabajo segun la rama 
-    if: ${{github.ref == 'refs/heads/main'}} 
+#     # Condiciona el flujo de trabajo segun la rama 
+#     if: ${{github.ref == 'refs/heads/main'}} 
     
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: "Desde context.yaml"
-        run: echo "Desde context.yaml"
+#     steps:
+#       - name: "Desde context.yaml"
+#         run: echo "Desde context.yaml"
