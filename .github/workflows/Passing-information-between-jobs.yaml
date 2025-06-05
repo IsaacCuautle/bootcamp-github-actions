@@ -25,7 +25,7 @@ jobs:
 
     # Crear variables de entorno y asignar el valor de la referencia
     env:
-      SALIDA: ${{ needs.firts_job.outputs.salida }}
+      SALIDA: ${{ needs.first_job.outputs.salida }}
 
     steps:
       - name: Imprimir mensaje
