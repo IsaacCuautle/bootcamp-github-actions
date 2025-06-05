@@ -10,7 +10,7 @@ jobs:
     
     # Variables de entorno
     env:
-      MESSAGE: desde env.yaml
+      MESSAGE: desde variables-de-entorno.yaml
 
     steps:
       - name: imprimir mensaje

@@ -1,0 +1,22 @@
+name: actions
+
+on: push
+
+jobs: 
+  
+  first_job:
+    runs-on: ubuntu-latest
+
+    # Las actions se declaran a nivel step
+    steps:
+      - name: Working dir
+        run: ls -al
+      
+      - name: Action example
+        
+        # se declara el repositorio, la accion y su version
+        # https://github.com/actions/checkout 
+        uses: actions/checkout@v4
+
+      - name: Working dir afeter action
+        run: ls -al
