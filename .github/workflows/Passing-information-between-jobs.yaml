@@ -19,14 +19,14 @@ jobs:
       - name: Obtener mensaje
         run: echo "${{ steps.step_1.outputs.message }}"
         
-    second_job:
-      needs: firts_job
-      runs-on: ubuntu-latest
+  second_job:
+    needs: firts_job
+    runs-on: ubuntu-latest
 
-      # Crear variables de entorno y asignar el valor de la referencia
-      env:
-        SALIDA: ${{ needs.firts_job.outputs.salida }}
+    # Crear variables de entorno y asignar el valor de la referencia
+    env:
+      SALIDA: ${{ needs.firts_job.outputs.salida }}
 
-      steps:
-        - name: Imprimir mensaje
-          run: echo "$SALIDA"
+    steps:
+      - name: Imprimir mensaje
+        run: echo "$SALIDA"
