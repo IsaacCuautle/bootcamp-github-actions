@@ -2,7 +2,7 @@ name: deploy
 on: push
 
 jobs:
-  first_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +19,9 @@ jobs:
 
       - name: testear
         run: npm run test
+
+    deploy:
+      
+      steps:
+        - name: deploy
+          run: echo "success deployment"
