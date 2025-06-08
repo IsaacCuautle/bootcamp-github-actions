@@ -23,6 +23,7 @@ jobs:
       - name: build
         run: npm run build
 
+      # subir el artefacto
       - name: subir el artefacto
         uses: actions/upload-pages-artifact@v3
         with:
