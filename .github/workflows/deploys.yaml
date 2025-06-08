@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: '18'
 
-      - name: install dependencias
+      - name: instalar dependencias
         run: npm i  
