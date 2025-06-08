@@ -20,10 +20,10 @@ jobs:
       - name: testear
         run: npm run test
 
-    deploy:
-      runs-on: ubuntu-latest
-      needs: build
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
       
-      steps:
-        - name: deploy
-          run: echo "success deployment"
+    steps:
+      - name: deploy
+        run: echo "success deployment"
