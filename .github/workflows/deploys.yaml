@@ -1,4 +1,4 @@
-name: secrets
+name: deploy
 on: push
 
 jobs:
@@ -6,5 +6,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: imprimir variable
-        run: echo "${{ secrets.TOKEN_SECRET }}"
+      - name: setup - node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
