@@ -1,16 +1,16 @@
-name: strategies
-on: push
+# name: strategies
+# on: push
 
-# Estrategias
-jobs: 
+# # Estrategias
+# jobs: 
   
-  first_job:
-    runs-on: ubuntu-latest
+#   first_job:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        message: ["version 1", "version 2", "version 3"]
+#     strategy:
+#       matrix:
+#         message: ["version 1", "version 2", "version 3"]
 
-    steps:
-      - name: imprimir mensaje
-        run: echo " ${{ matrix.message }}"
+#     steps:
+#       - name: imprimir mensaje
+#         run: echo " ${{ matrix.message }}"
