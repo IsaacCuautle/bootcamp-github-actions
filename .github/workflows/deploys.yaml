@@ -16,3 +16,6 @@ jobs:
 
       - name: instalar dependencias
         run: npm i  
+
+      - name: testear
+        run: npm run test
